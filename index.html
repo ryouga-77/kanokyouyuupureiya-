@@ -2,39 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>プレイヤー</title>
+<title>Kanon HTML5プレイヤー</title>
 </head>
 <body>
 
-    <h1>プレイヤー</h1>
+    <h1>Kanon HTML5プレイヤー</h1>
+    <p>カノン アレンジ (マスタリング済)</p>
 
-    <audio id="player" controls autoplay>
+    <audio src="kanonarennziba-jyon_mastered.mp3" controls>
         お使いのブラウザは音声再生をサポートしていません。
     </audio>
-
-    <br><br>
-
-    <select id="trackSelect" onchange="playAudio()">
-        <option value="">▼ 曲を選択してください</option>
-        <option value="kanon.mp3">カノン (原曲) - mp3</option>
-        <option value="kanonarennziba-jyon.m4a">カノン アレンジ (オリジナル) - m4a</option>
-        <option value="kanonarennziba-jyon_mastered.mp3">カノン アレンジ (マスタリング済) - mp3</option>
-        <option value="kanonarennziba-jyon_mastered.wav">カノン アレンジ (マスタリング済 高音質) - wav</option>
-        <option value="kanonarennziba-jyondram-solo.mp3">カノン アレンジ (ドラムソロ) - mp3</option>
-        <option value="kanonarennziba-jyonNo-dram.mp3">カノン アレンジ (ドラムなし) - mp3</option>
-    </select>
-
-    <script>
-        function playAudio() {
-            const player = document.getElementById('player');
-            const select = document.getElementById('trackSelect');
-            
-            // 空の選択肢以外が選ばれたら再生する
-            if (select.value !== "") {
-                player.src = select.value;
-            }
-        }
-    </script>
 
 </body>
 </html>
